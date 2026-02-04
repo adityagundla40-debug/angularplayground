@@ -1,0 +1,82 @@
+.formContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.formContainer > form{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    width: 600px;
+    height:fit-content;
+    
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+label{
+    font-size: 28px;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(83, 80, 80);
+    width: 100%;
+}
+
+input{
+    height: 20px;
+    border: .5px solid lightblue;
+    font-size: 20px;
+}
+
+
+.btnCenter{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.btnCenter button{
+    margin-top: 30px;
+    width: 80px;
+    background-color: rgb(64, 239, 64);
+    height: 45px;
+    font-size: 20px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.dataContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.formData{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    margin-top: 20px;
+    width: 600px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
+    height: fit-content;
+}
+
+.formData span{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+}
+
+.errorDisplay{
+    background-color: red;
+    font-size: 22px;
+    font-family: 'Courier New', Courier, monospace;
+    height: fit-content;
+}

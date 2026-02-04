@@ -1,17 +1,35 @@
-<p>studentform works!</p>
-<form [formGroup]="searchvalues" (ngSubmit)="handlestu()">
 
-    <label for="studentname">name</label>
-    <input type="text" class="studname" formControlName="stuname" placeholder="enter name here" required/>
+    <div class="formContainer">
 
-    <label for="studentphone">phone</label>
-    <input type="text" class="studphone" placeholder="enter name here" formControlName="stuphone" required/>
+        <div class="errorDisplay" *ngFor="let s of pagedata.emptyfield;">
+            <strong>field {{s}} is empty</strong>
+        </div>
 
-    <label for="studentgender">gender</label>
-    <input type="text" class="studgender" formControlName="stugender" placeholder="enter name here" required/>
+        <form [formGroup]="searchvalues" (ngSubmit)="handlestu()">
 
-    <label for="studentaddress">address</label>
-    <input type="text" class="studaddress" formControlName="stuaddress" placeholder="enter name here" required/>
+        <label for="studentname">name</label>
+        <input type="text" class="studname" formControlName="stuname" placeholder="enter name here" required/>
 
-    <button>submit</button>
-</form>
+        <label for="studentphone">phone</label>
+        <input type="text" class="studphone" placeholder="enter name here" formControlName="stuphone" required/>
+
+        <label for="studentgender">gender</label>
+        <input type="text" class="studgender" formControlName="stugender" placeholder="enter name here" required/>
+
+        <label for="studentaddress">address</label>
+        <input type="text" class="studaddress" formControlName="stuaddress" placeholder="enter name here" required/>
+
+        <div class="btnCenter">
+            <button>Submit</button>
+        </div>
+    </form>
+    </div>
+
+    <div class="dataContainer">
+        <div class="formData">
+        <span>{{pagedata.name}}</span>
+        <span>{{pagedata.phone}}</span>
+        <span>{{pagedata.gender}}</span>
+        <span>{{pagedata.address}}</span>
+    </div>
+    </div>
