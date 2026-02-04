@@ -1,0 +1,17 @@
+<p>studentform works!</p>
+<form [formGroup]="searchvalues" (ngSubmit)="handlestu()">
+
+    <label for="studentname">name</label>
+    <input type="text" class="studname" formControlName="stuname" placeholder="enter name here" required/>
+
+    <label for="studentphone">phone</label>
+    <input type="text" class="studphone" placeholder="enter name here" formControlName="stuphone" required/>
+
+    <label for="studentgender">gender</label>
+    <input type="text" class="studgender" formControlName="stugender" placeholder="enter name here" required/>
+
+    <label for="studentaddress">address</label>
+    <input type="text" class="studaddress" formControlName="stuaddress" placeholder="enter name here" required/>
+
+    <button>submit</button>
+</form>
