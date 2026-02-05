@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import {FormGroup,FormControl, ReactiveFormsModule} from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-studentform',
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule,CommonModule],
   templateUrl: './studentform.html',
   styleUrl: './studentform.css',
 })
@@ -32,37 +33,25 @@ export class Studentform {
   handlestu(){
 
     this.pagedata.emptyfield = [];
+    var fields = [
+    {key: 'stuname' , label: 'name'},
+    {key: 'stuphone' , label: 'phone'},
+    {key: 'stugender' , label: 'gender'},
+    {key: 'stuaddress' , label: 'address'}
+   ];
     
-    for(let i = 0; i < 4; i++){
-      switch(i){
-
-        case 0:
-          if(this.searchvalues.get('stuname')?.value?.trim() == ''){
-            this.pagedata.emptyfield.push("name");
-          }
-          break;
-        case 1:
-          if(this.searchvalues.get('stuphone')?.value?.trim() == ''){
-            this.pagedata.emptyfield.push("phone");
-          }
-          break;
-        case 2:
-          if(this.searchvalues.get('stugender')?.value?.trim() == ''){
-            this.pagedata.emptyfield.push("gender");
-          }
-          break;
-        case 3:
-          if(this.searchvalues.get('stuaddress')?.value?.trim() == ''){
-            this.pagedata.emptyfield.push("address");
-          }
-          break;
-      }
+   fields.forEach(f =>{
+    var value = this.searchvalues.get(f.key)?.value?.trim();
+    if(!value)
+    {
+      this.pagedata.emptyfield.push(f.label);
     }
-    
+   });
     this.pagedata.name = this.searchvalues.get('stuname')?.value;
     this.pagedata.phone = this.searchvalues.get('stuphone')?.value;
     this.pagedata.gender = this.searchvalues.get('stugender')?.value;
     this.pagedata.address = this.searchvalues.get('stuaddress')?.value;
+console.log(this.pagedata.emptyfield);
 
 
   } 

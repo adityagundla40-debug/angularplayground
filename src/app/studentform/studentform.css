@@ -1,6 +1,6 @@
 .formContainer{
     display: flex;
-    flex-direction: column;
+    flex-direction:column;
     width: 100%;
     align-items: center;
     justify-content: center;
@@ -74,9 +74,30 @@ input{
     font-size: 25px;
 }
 
+
+.errorCenter{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: auto;
+}
 .errorDisplay{
-    background-color: red;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     font-size: 22px;
     font-family: 'Courier New', Courier, monospace;
-    height: fit-content;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.196);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
+    border: none ;
+    border-radius: 50px;
+    color: rgb(255, 0, 0);
+    width: 350px;
+    margin-top: 20px;
+    
 }
